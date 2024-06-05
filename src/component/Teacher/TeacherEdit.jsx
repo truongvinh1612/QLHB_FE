@@ -93,15 +93,7 @@ const TeacherEdit = () => {
                   fullWidth
                   margin="normal"
                 />
-                <TextField
-                  size="small"
-                  label="Lớp"
-                  name="lop"
-                  value={teacher.lop || ""}
-                  onChange={handleChange}
-                  fullWidth
-                  margin="normal"
-                />
+                
                 <FormControl fullWidth margin="normal" size="small">
                   <InputLabel>Giới tính</InputLabel>
                   <Select
@@ -114,6 +106,7 @@ const TeacherEdit = () => {
                     <MenuItem value="false">Nữ</MenuItem>
                   </Select>
                 </FormControl>
+
                 <TextField
                   size="small"
                   label="Mã giáo viên"
@@ -123,23 +116,57 @@ const TeacherEdit = () => {
                   fullWidth
                   margin="normal"
                 />
-                <FormControl fullWidth margin="normal" size="small">
-                  <InputLabel>Trạng thái</InputLabel>
-                  <Select
-                    name="trangThai"
-                    label="Trạng thái"
-                    value={teacher.trangThai ? "true" : "false"}
-                    onChange={handleChange}
-                  >
-                    <MenuItem value="true">Đang học</MenuItem>
-                    <MenuItem value="false">Không học</MenuItem>
-                  </Select>
-                </FormControl>
+                
                 <TextField
                   size="small"
-                  label="Mã định danh"
-                  name="maDinhDanh"
-                  value={teacher.maDinhDanh || ""}
+                  label="Căn cước công dân"
+                  name="cccd"
+                  value={teacher.cccd || ""}
+                  onChange={handleChange}
+                  fullWidth
+                  margin="normal"
+                />
+                <TextField
+                  size="small"
+                  label="Số điện thoại"
+                  name="sdt"
+                  value={teacher.sdt || ""}
+                  onChange={handleChange}
+                  fullWidth
+                  margin="normal"
+                />
+                <TextField
+                  size="small"
+                  label="Email"
+                  name="email"
+                  value={teacher.email || ""}
+                  onChange={handleChange}
+                  fullWidth
+                  margin="normal"
+                />
+                <TextField
+                  size="small"
+                  label="Trình độ"
+                  name="trinhDo"
+                  value={teacher.trinhDo || ""}
+                  onChange={handleChange}
+                  fullWidth
+                  margin="normal"
+                />
+                <TextField
+                  size="small"
+                  label="Chứng chỉ Tin Học"
+                  name="chungChiTh"
+                  value={teacher.chungChiTh || ""}
+                  onChange={handleChange}
+                  fullWidth
+                  margin="normal"
+                />
+                <TextField
+                  size="small"
+                  label="Chứng chỉ Ngoại Ngữ"
+                  name="chungChiNn"
+                  value={teacher.chungChiNn || ""}
                   onChange={handleChange}
                   fullWidth
                   margin="normal"
@@ -161,23 +188,7 @@ const TeacherEdit = () => {
                     shrink: true,
                   }}
                 />
-                <TextField
-                  size="small"
-                  label="Ngày vào trường"
-                  type="date"
-                  name="nhapHoc"
-                  value={
-                    teacher.nhapHoc
-                      ? new Date(teacher.nhapHoc).toISOString().substr(0, 10)
-                      : ""
-                  }
-                  onChange={handleChange}
-                  fullWidth
-                  margin="normal"
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                />
+               
               </div>
               <div>
                 <TextField
